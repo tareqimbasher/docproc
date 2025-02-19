@@ -2,7 +2,7 @@
 
 
 
-### JSON
+### Usage
 
 ```js
 {
@@ -11,7 +11,13 @@
   "removeContainingParagraphIfEmpty": false
 }
 ```
-### Properties
+#### Properties
 
-  - `fieldName` [`String`]
-  - `removeContainingParagraphIfEmpty` [`Boolean`]
+**`fieldName`**  `string`
+
+
+
+**`removeContainingParagraphIfEmpty`**  `boolean`
+
+
+

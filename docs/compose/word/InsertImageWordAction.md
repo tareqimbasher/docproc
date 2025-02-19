@@ -2,7 +2,7 @@
 
 
 
-### JSON
+### Usage
 
 ```js
 {
@@ -14,10 +14,25 @@
   "title": null
 }
 ```
-### Properties
+#### Properties
 
-  - `image` [`IFormFile`]
-  - `insertMarkerMergeFieldName` [`String`]
-  - `resizeToWidth` [`Int32?`]
-  - `resizeToHeight` [`Int32?`]
-  - `title` [`String`]
+**`image`**  `iformfile`
+
+
+
+**`insertMarkerMergeFieldName`**  `string`
+
+
+
+**`resizeToWidth`**  `int32?`
+
+
+
+**`resizeToHeight`**  `int32?`
+
+
+
+**`title`**  `string`
+
+
+

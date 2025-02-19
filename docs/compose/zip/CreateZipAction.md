@@ -2,15 +2,15 @@
 
 Creates a zip file from a group of documents.
 
-### Supported Inputs
+### Accepts
 
   - `Any`
 
-### Possible Outputs
+### Outputs
 
   - `application/zip`
 
-### JSON
+### Usage
 
 ```js
 {
@@ -18,11 +18,15 @@ Creates a zip file from a group of documents.
   "level": null
 }
 ```
-### Properties
+#### Properties
 
-  - `level` [`CompressionLevel?`]: If specified, sets the compression level of the zip file. Options:
+**`level`**  `compressionlevel?`
+
+If specified, sets the compression level of the zip file. Options:
   
-    - Optimal
-    - Fastest
-    - NoCompression
-    - SmallestSize
+  - Optimal
+  - Fastest
+  - NoCompression
+  - SmallestSize
+
+

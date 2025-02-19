@@ -4,7 +4,7 @@
   
 - Compose
 
-  - [API](/compose/api.md)
+  - [API](/compose/)
 
   - Common
     - [Slice](/compose/common/SliceAction.md)

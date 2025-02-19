@@ -2,15 +2,15 @@
 
 Merges multiple PDF documents into one.
 
-### Supported Inputs
+### Accepts
 
   - `application/pdf`
 
-### Possible Outputs
+### Outputs
 
   - `application/pdf`
 
-### JSON
+### Usage
 
 ```js
 {

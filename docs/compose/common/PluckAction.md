@@ -2,15 +2,15 @@
 
 Selects any number of documents and discards the rest.
 
-### Supported Inputs
+### Accepts
 
   - `Any`
 
-### Possible Outputs
+### Outputs
 
   - `Any`
 
-### JSON
+### Usage
 
 ```js
 {
@@ -19,7 +19,15 @@ Selects any number of documents and discards the rest.
   "ignoreOutOfBounds": false
 }
 ```
-### Properties
+#### Properties
 
-  - `indexes` [`Int32[]`] **Required**: 0-based indexes of the documents to pluck. Items are plucked in this order.
-  - `ignoreOutOfBounds` [`Boolean`]: Ignore indexes that are out of bounds.
+**`indexes`**  `int32[]` **Required**
+
+0-based indexes of the documents to pluck. Items are plucked in this order.
+
+
+**`ignoreOutOfBounds`**  `boolean`
+
+Ignore indexes that are out of bounds.
+
+

@@ -2,15 +2,15 @@
 
 Reverses the order of documents.
 
-### Supported Inputs
+### Accepts
 
   - `Any`
 
-### Possible Outputs
+### Outputs
 
   - `Any`
 
-### JSON
+### Usage
 
 ```js
 {

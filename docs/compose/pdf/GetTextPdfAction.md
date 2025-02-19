@@ -2,15 +2,15 @@
 
 Extracts text from PDF documents.
 
-### Supported Inputs
+### Accepts
 
   - `application/pdf`
 
-### Possible Outputs
+### Outputs
 
   - `text/plain`
 
-### JSON
+### Usage
 
 ```js
 {
@@ -18,6 +18,10 @@ Extracts text from PDF documents.
   "followLayout": false
 }
 ```
-### Properties
+#### Properties
 
-  - `followLayout` [`Boolean`]: Attempt to follow the layout of the document when extracting text.
+**`followLayout`**  `boolean`
+
+Attempt to follow the layout of the document when extracting text.
+
+

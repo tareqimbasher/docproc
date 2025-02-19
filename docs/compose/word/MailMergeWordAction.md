@@ -2,25 +2,35 @@
 
 Executes a Word mail merge.
 
-### Supported Inputs
+### Accepts
 
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.template`
 
-### Possible Outputs
+### Outputs
 
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
 
-### JSON
+### Usage
 
 ```js
 {
   "kind": "WordMailMerge",
-  "data": null,
+  "data": {},
   "unspecifiedFieldValue": null
 }
 ```
-### Properties
+#### Properties
 
-  - `data` [`Dictionary`2`] **Required**: A MergeFieldName -> Value map to fill merge fields.
-  - `unspecifiedFieldValue` [`String`]: If specified, any merge field that did not occur in the Data mapping will be assigned this value. Otherwise, those fields remain untouched.
+**`data`**  `dictionary<string, string>` **Required**
+
+A hashmap of merge field data used to populate mail merge fields in a Word document.
+The keys represent the names of the merge fields, and the values contain the text that will replace
+each corresponding field during the merge process.
+
+
+**`unspecifiedFieldValue`**  `string`
+
+Gets or sets the text to apply to any merge fields that are not found in the data mapping.If this property is left null or unspecified, those fields will remain unchanged.
+
+

@@ -25,7 +25,8 @@ Content-Disposition: form-data; name="actions"
 ]
 ------BOUNDRYNAME--
 ```
-> The above request would split a PDF document into multiple documents, one per page. 
+
+> This request would split a PDF document into multiple documents, one per page. 
 
 #### Multipart Form Data
 
@@ -40,7 +41,7 @@ Add one `actions` part. Its contents should be an array of actions (`Action[]`) 
 ## Actions
 
 Actions are a way to express a transformation of a document. Each action has a `kind` property that
-identifies its type, and zero or more other property options that are specific to that action. Actions are executed sequentially. When an action runs, it takes the output from the previous step as input. It then applies its transformation of the document(s) and its output is used for the next action.
+identifies its type, and zero or more other property options that are specific to that action. Actions are executed sequentially. When an action runs, it takes the output from the previous step as input. It applies its transformation to the document(s) and its output is then used for the next action.
 
 
 ```js
@@ -60,6 +61,14 @@ identifies its type, and zero or more other property options that are specific t
   }
 ]
 ```
+
+**Explanation** This request contains 3 actions:
+
+1. First the Word document is mail merged using the provided data. `kind` = [`WordMailMerge`](/compose/word/MailMergeWordAction.md)
+2. The next action converts the Word document to a PDF. `kind` = [`WordConvertToPdf`](/compose/word/ConvertToPdfWordAction.md)
+3. Finally, the PDF is compressed to reduce its size. `kind`= [`PdfCompress`](/compose/pdf/CompressPdfAction.md)
+
+The 
 
 ### Diagrams
 
@@ -125,5 +134,10 @@ These properties are common to all actions.
 
 #### Details
 
-- `kind` [`ActionKind`] **Required**: A discriminator that identifies the type of action.
-- `continueOnError` [`boolean`]: If true and an error happens in the action, the error is ignored and processing continues with the next action.
+**`kind`** `ActionKind` **Required**
+
+A discriminator that identifies the type of action.
+
+**`continueOnError`** `boolean`
+
+If true and an error happens in the action, the error is ignored and processing continues with the next action.

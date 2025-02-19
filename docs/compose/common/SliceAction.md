@@ -2,15 +2,15 @@
 
 Selects a range of documents and discards the rest.
 
-### Supported Inputs
+### Accepts
 
   - `Any`
 
-### Possible Outputs
+### Outputs
 
   - `Any`
 
-### JSON
+### Usage
 
 ```js
 {
@@ -20,8 +20,20 @@ Selects a range of documents and discards the rest.
   "reverse": false
 }
 ```
-### Properties
+#### Properties
 
-  - `skip` [`Int32?`]: How many items to skip.
-  - `take` [`Int32?`]: How many items to take.
-  - `reverse` [`Boolean`]: Whether to skip/take starting from the end; ie. `Skip = 1` in this case will skip the last document.
+**`skip`**  `int32?`
+
+How many items to skip.
+
+
+**`take`**  `int32?`
+
+How many items to take.
+
+
+**`reverse`**  `boolean`
+
+Whether to skip/take starting from the end; ie. `Skip = 1` in this case will skip the last document.
+
+

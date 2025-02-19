@@ -2,7 +2,7 @@
 
 Scales (resizes) an image to new dimensions.
 
-### Supported Inputs
+### Accepts
 
   - `image/png`
   - `image/x-png`
@@ -12,7 +12,7 @@ Scales (resizes) an image to new dimensions.
   - `image/vnd.wap.wbmp`
   - `image/heif`
 
-### Possible Outputs
+### Outputs
 
   - `image/png`
   - `image/x-png`
@@ -22,7 +22,7 @@ Scales (resizes) an image to new dimensions.
   - `image/vnd.wap.wbmp`
   - `image/heif`
 
-### JSON
+### Usage
 
 ```js
 {
@@ -31,7 +31,15 @@ Scales (resizes) an image to new dimensions.
   "height": null
 }
 ```
-### Properties
+#### Properties
 
-  - `width` [`Int32?`]: If specified, the image will be scaled to this width. Otherwise the original width is used. Cannot be null if Height is null.
-  - `height` [`Int32?`]: If specified, the image will be scaled to this height. Otherwise the original height is used. Cannot be null if Width is null.
+**`width`**  `int32?`
+
+If specified, the image will be scaled to this width. Otherwise the original width is used. Cannot be null if Height is null.
+
+
+**`height`**  `int32?`
+
+If specified, the image will be scaled to this height. Otherwise the original height is used. Cannot be null if Width is null.
+
+

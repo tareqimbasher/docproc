@@ -2,16 +2,16 @@
 
 Find and replace text in Word documents.
 
-### Supported Inputs
+### Accepts
 
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.template`
 
-### Possible Outputs
+### Outputs
 
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
 
-### JSON
+### Usage
 
 ```js
 {
@@ -22,9 +22,25 @@ Find and replace text in Word documents.
   "wholeWord": false
 }
 ```
-### Properties
+#### Properties
 
-  - `findText` [`String`] **Required**: The text to replace.
-  - `replaceWithText` [`String`] **Required**: The text to replace with.
-  - `caseSensitive` [`Boolean?`]: Perform a case-sensitive search.
-  - `wholeWord` [`Boolean`]: Match only whole word.
+**`findText`**  `string` **Required**
+
+The text to replace.
+
+
+**`replaceWithText`**  `string` **Required**
+
+The text to replace with.
+
+
+**`caseSensitive`**  `boolean?`
+
+Perform a case-sensitive search.
+
+
+**`wholeWord`**  `boolean`
+
+Match only whole word.
+
+

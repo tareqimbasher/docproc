@@ -2,16 +2,16 @@
 
 Converts Word documents to PDF.
 
-### Supported Inputs
+### Accepts
 
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
   - `application/vnd.openxmlformats-officedocument.wordprocessingml.template`
 
-### Possible Outputs
+### Outputs
 
   - `application/pdf`
 
-### JSON
+### Usage
 
 ```js
 {

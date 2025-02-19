@@ -2,15 +2,15 @@
 
 Splits the pages of PDF documents into separate PDF documents.
 
-### Supported Inputs
+### Accepts
 
   - `application/pdf`
 
-### Possible Outputs
+### Outputs
 
   - `application/pdf`
 
-### JSON
+### Usage
 
 ```js
 {

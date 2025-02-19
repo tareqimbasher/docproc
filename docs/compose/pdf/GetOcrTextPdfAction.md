@@ -2,7 +2,7 @@
 
 
 
-### JSON
+### Usage
 
 ```js
 {

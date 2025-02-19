@@ -2,7 +2,7 @@
 
 
 
-### JSON
+### Usage
 
 ```js
 {
@@ -11,7 +11,13 @@
   "text": null
 }
 ```
-### Properties
+#### Properties
 
-  - `fieldName` [`String`]
-  - `text` [`String`]
+**`fieldName`**  `string`
+
+
+
+**`text`**  `string`
+
+
+

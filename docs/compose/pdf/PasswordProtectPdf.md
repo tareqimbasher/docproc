@@ -2,15 +2,15 @@
 
 Password-protects the contents of PDF documents.
 
-### Supported Inputs
+### Accepts
 
   - `application/pdf`
 
-### Possible Outputs
+### Outputs
 
   - `application/pdf`
 
-### JSON
+### Usage
 
 ```js
 {
@@ -19,7 +19,15 @@ Password-protects the contents of PDF documents.
   "userPassword": null
 }
 ```
-### Properties
+#### Properties
 
-  - `ownerPassword` [`String`]: The owner password.
-  - `userPassword` [`String`]: The user password.
+**`ownerPassword`**  `string` **Required**
+
+The owner password.
+
+
+**`userPassword`**  `string` **Required**
+
+The user password.
+
+
