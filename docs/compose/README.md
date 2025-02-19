@@ -30,13 +30,21 @@ Content-Disposition: form-data; name="actions"
 
 #### Multipart Form Data
 
-##### `file` **(required)**
+The request should be multipart form data with 2 parts.
+
+**`file`** **(required)**
 
 Add a `file` part **for each** document to include in the request. Be sure to add a valid `Content-Type`.
 
-##### `actions` **(required)**
+**`actions`** **(required)**
 
-Add one `actions` part. Its contents should be an array of actions (`Action[]`) serialized to a JSON string.
+Add **only one** `actions` part. Its contents should be an array of actions (`Action[]`) serialized to a JSON string.
+
+#### Response
+
+The endpoint will respode with `200 OK` and a stream with the output document.
+
+The response will also contain a `Content-Type` header with the mimetype of the output document. If the action workflow resulted in multiple documents, the response will be a `.zip` file with the `Content-Type` set to `application/zip`.
 
 ## Actions
 
@@ -62,13 +70,13 @@ identifies its type, and zero or more other property options that are specific t
 ]
 ```
 
-**Explanation** This request contains 3 actions:
+**Breakdown**
+
+This request contains 3 actions:
 
 1. First the Word document is mail merged using the provided data. `kind` = [`WordMailMerge`](/compose/word/MailMergeWordAction.md)
 2. The next action converts the Word document to a PDF. `kind` = [`WordConvertToPdf`](/compose/word/ConvertToPdfWordAction.md)
 3. Finally, the PDF is compressed to reduce its size. `kind`= [`PdfCompress`](/compose/pdf/CompressPdfAction.md)
-
-The 
 
 ### Diagrams
 
