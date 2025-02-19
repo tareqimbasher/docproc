@@ -2,7 +2,7 @@
 
 # DocProcessor <small>1.0</small>
 
-> A functional document processing API.
+> A powerful document processing engine.
 
 [GitHub](https://github.com/docsifyjs/docsify/)
 [Get Started](#document-processor)

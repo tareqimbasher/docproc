@@ -1,6 +1,6 @@
 # Document Processor
 
-An ASP.NET web application that offers an HTTP interface to read and edit documents.
+An ASP.NET web application that offers an HTTP interface to process and transform documents.
 
 ## Build & Run
 
