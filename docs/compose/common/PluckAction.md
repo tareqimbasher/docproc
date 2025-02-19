@@ -1,4 +1,4 @@
-# Pluck
+# <small>:nut_and_bolt:</small> Pluck
 
 Selects any number of documents and discards the rest.
 

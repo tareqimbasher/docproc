@@ -1,4 +1,4 @@
-# Compress
+# <small>:nut_and_bolt:</small> Compress
 
 Compresses PDF documents.
 

@@ -1,4 +1,4 @@
-# SortReverse
+# <small>:nut_and_bolt:</small> SortReverse
 
 Reverses the order of documents.
 

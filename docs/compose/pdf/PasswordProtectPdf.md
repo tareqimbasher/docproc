@@ -1,4 +1,4 @@
-# PasswordProtect
+# <small>:nut_and_bolt:</small> PasswordProtect
 
 Password-protects the contents of PDF documents.
 

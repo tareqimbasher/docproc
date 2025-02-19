@@ -1,4 +1,4 @@
-# ConvertToPdf
+# <small>:nut_and_bolt:</small> ConvertToPdf
 
 Converts Word documents to PDF.
 

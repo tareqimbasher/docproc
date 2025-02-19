@@ -1,7 +1,6 @@
 # Compose API
 
-One endpoint that accepts one or more documents and a list of actions to apply to those documents.
-Each action is a type of transformation that occurs to the document(s).
+One endpoint that accepts one or more documents and a list of [`Actions`](#actions) to apply to those documents. 
 
 ## Usage
 
@@ -26,12 +25,17 @@ Content-Disposition: form-data; name="actions"
 ]
 ------BOUNDRYNAME--
 ```
+> The above request would split a PDF document into multiple documents, one per page. 
 
-#### Important
+#### Multipart Form Data
 
-- To upload multiple files, create a `file` part for each document.
-- Each `file` part must specify a `Content-Type`.
-- There can only be one `actions` part.
+##### `file` **(required)**
+
+Add a `file` part **for each** document to include in the request. Be sure to add a valid `Content-Type`.
+
+##### `actions` **(required)**
+
+Add one `actions` part. Its contents should be an array of actions (`Action[]`) serialized to a JSON string.
 
 ## Actions
 
@@ -121,5 +125,5 @@ These properties are common to all actions.
 
 #### Details
 
-- `kind` [`ActionKind`] **Required**: The action type.
+- `kind` [`ActionKind`] **Required**: A discriminator that identifies the type of action.
 - `continueOnError` [`boolean`]: If true and an error happens in the action, the error is ignored and processing continues with the next action.

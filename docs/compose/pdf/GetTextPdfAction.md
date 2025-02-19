@@ -1,4 +1,4 @@
-# GetText
+# <small>:nut_and_bolt:</small> GetText
 
 Extracts text from PDF documents.
 

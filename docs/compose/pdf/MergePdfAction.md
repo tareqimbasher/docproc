@@ -1,4 +1,4 @@
-# Merge
+# <small>:nut_and_bolt:</small> Merge
 
 Merges multiple PDF documents into one.
 

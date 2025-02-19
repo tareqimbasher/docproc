@@ -1,4 +1,4 @@
-# ReplaceText
+# <small>:nut_and_bolt:</small> ReplaceText
 
 Find and replace text in Word documents.
 

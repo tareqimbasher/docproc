@@ -1,4 +1,4 @@
-# Scale
+# <small>:nut_and_bolt:</small> Scale
 
 Scales (resizes) an image to new dimensions.
 

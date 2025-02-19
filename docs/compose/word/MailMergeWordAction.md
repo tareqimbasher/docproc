@@ -1,4 +1,4 @@
-# MailMerge
+# <small>:nut_and_bolt:</small> MailMerge
 
 Executes a Word mail merge.
 
