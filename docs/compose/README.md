@@ -111,7 +111,7 @@ flowchart LR
 
 **Example 3**
 
-2 PDF documents are passed, the first has 2 pages and the second has 3. Each is split, resulting in 5 separate PDF documents. We then select, using `Pluck`, the items we want to keep, index 0 and 2; the first page of each of the original documents. Finally, we merge the 2 documents into a new PDF and return.
+2 PDF documents are passed, the first has 2 pages and the second has 3. Each is split, resulting in 5 separate PDF documents. We then select, using [`Pluck`](/compose/common/PluckAction.md), the items we want to keep, index 0 and 2; the first page of each of the original documents. Finally, we merge the 2 documents into a new PDF and return.
 
 ```mermaid
 flowchart LR

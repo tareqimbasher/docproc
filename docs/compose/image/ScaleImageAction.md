@@ -9,7 +9,6 @@ Scales (resizes) an image to new dimensions.
   - `image/jpeg`
   - `image/webp`
   - `image/bmp`
-  - `image/vnd.wap.wbmp`
   - `image/heif`
 
 ### Outputs
@@ -19,7 +18,6 @@ Scales (resizes) an image to new dimensions.
   - `image/jpeg`
   - `image/webp`
   - `image/bmp`
-  - `image/vnd.wap.wbmp`
   - `image/heif`
 
 ### Usage
