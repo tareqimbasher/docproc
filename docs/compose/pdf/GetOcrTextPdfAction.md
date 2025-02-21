@@ -2,6 +2,14 @@
 
 
 
+### Accepts
+
+  - `application/pdf` _(.pdf)_
+
+### Produces
+
+  - `text/plain` _(.txt)_
+
 ### Usage
 
 ```js

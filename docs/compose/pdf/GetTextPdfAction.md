@@ -4,11 +4,11 @@ Extracts text from PDF documents.
 
 ### Accepts
 
-  - `application/pdf`
+  - `application/pdf` _(.pdf)_
 
-### Outputs
+### Produces
 
-  - `text/plain`
+  - `text/plain` _(.txt)_
 
 ### Usage
 

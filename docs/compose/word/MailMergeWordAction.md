@@ -4,12 +4,12 @@ Executes a Word mail merge.
 
 ### Accepts
 
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.template`
+  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
+  - `application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_
 
-### Outputs
+### Produces
 
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
+  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
 
 ### Usage
 

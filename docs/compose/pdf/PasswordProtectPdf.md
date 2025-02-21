@@ -4,11 +4,11 @@ Password-protects the contents of PDF documents.
 
 ### Accepts
 
-  - `application/pdf`
+  - `application/pdf` _(.pdf)_
 
-### Outputs
+### Produces
 
-  - `application/pdf`
+  - `application/pdf` _(.pdf)_
 
 ### Usage
 

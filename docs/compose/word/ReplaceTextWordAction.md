@@ -4,12 +4,12 @@ Find and replace text in Word documents.
 
 ### Accepts
 
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.template`
+  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
+  - `application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_
 
-### Outputs
+### Produces
 
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
+  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
 
 ### Usage
 
@@ -17,7 +17,7 @@ Find and replace text in Word documents.
 {
   "kind": "WordReplaceText",
   "findText": null,
-  "replaceWithText": null,
+  "replaceText": null,
   "caseSensitive": true,
   "wholeWord": false
 }
@@ -29,9 +29,9 @@ Find and replace text in Word documents.
 The text to replace.
 
 
-**`replaceWithText`**  `string` **Required**
+**`replaceText`**  `string` **Required**
 
-The text to replace with.
+The text to use as replacement.
 
 
 **`caseSensitive`**  `boolean?`
@@ -41,6 +41,6 @@ Perform a case-sensitive search.
 
 **`wholeWord`**  `boolean`
 
-Match only whole word.
+Match only whole words.
 
 
