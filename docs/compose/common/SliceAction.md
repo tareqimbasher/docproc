@@ -20,7 +20,7 @@ This action accepts and produces the following content type formats.
   "reverse": false
 }
 ```
-#### Properties
+### Properties
 
 **`skip`**  `int32?`
 

@@ -22,7 +22,7 @@ This action accepts and produces the following content type formats.
   "removeMetadata": false
 }
 ```
-#### Properties
+### Properties
 
 **`compressImages`**  `boolean`
 

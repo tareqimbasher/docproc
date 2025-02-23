@@ -20,7 +20,7 @@ This action accepts and produces the following content type formats.
   "newText": null
 }
 ```
-#### Properties
+### Properties
 
 **`fieldName`**  `string`
 

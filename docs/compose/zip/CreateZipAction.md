@@ -18,7 +18,7 @@ This action accepts and produces the following content type formats.
   "level": null
 }
 ```
-#### Properties
+### Properties
 
 **`level`**  `compressionlevel?`
 

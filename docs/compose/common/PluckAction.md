@@ -19,7 +19,7 @@ This action accepts and produces the following content type formats.
   "ignoreOutOfBounds": false
 }
 ```
-#### Properties
+### Properties
 
 **`indexes`**  `int32[]` **Required**
 

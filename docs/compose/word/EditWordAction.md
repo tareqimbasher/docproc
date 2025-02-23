@@ -18,10 +18,54 @@ This action accepts and produces the following content type formats.
   "edits": []
 }
 ```
-#### Properties
+### Properties
 
-**`edits`**  `iwordedit[]` **Required**
+**`edits`**  `IWordEdit[]` **Required**
 
-The edits to make to the documents.
+The edits to apply to the documents.
 
+
+### Types
+
+##### `IWordEdit`
+
+Types:
+
+**`AddEdit`**
+
+```js
+{
+  "op": "Add",
+  "path": null,
+  "item": null
+}
+```
+
+**`UpdateEdit`**
+
+```js
+{
+  "op": "Update",
+  "path": null
+}
+```
+
+**`RemoveEdit`**
+
+```js
+{
+  "op": "Remove",
+  "path": null
+}
+```
+
+**`CopyEdit`**
+
+```js
+{
+  "op": "Copy",
+  "path": null,
+  "destPath": null
+}
+```
 

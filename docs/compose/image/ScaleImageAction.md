@@ -20,7 +20,7 @@ This action accepts and produces the following content type formats.
   "quality": 100
 }
 ```
-#### Properties
+### Properties
 
 **`width`**  `int32?`
 

@@ -18,7 +18,7 @@ This action accepts and produces the following content type formats.
   "followLayout": false
 }
 ```
-#### Properties
+### Properties
 
 **`followLayout`**  `boolean`
 

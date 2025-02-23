@@ -19,7 +19,7 @@ This action accepts and produces the following content type formats.
   "removeContainingParagraphIfEmpty": false
 }
 ```
-#### Properties
+### Properties
 
 **`fieldName`**  `string`
 

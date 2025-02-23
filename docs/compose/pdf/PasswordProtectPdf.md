@@ -19,7 +19,7 @@ This action accepts and produces the following content type formats.
   "userPassword": null
 }
 ```
-#### Properties
+### Properties
 
 **`ownerPassword`**  `string` **Required**
 

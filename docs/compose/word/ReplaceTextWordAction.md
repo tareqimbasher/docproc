@@ -21,7 +21,7 @@ This action accepts and produces the following content type formats.
   "wholeWord": false
 }
 ```
-#### Properties
+### Properties
 
 **`findText`**  `string` **Required**
 
