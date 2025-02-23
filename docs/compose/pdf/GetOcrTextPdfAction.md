@@ -1,14 +1,14 @@
 # <small>:nut_and_bolt:</small> GetOcrText
 
 
+   
+### Formats
 
-### Accepts
+This action accepts and produces the following content type formats.
 
-  - `application/pdf` _(.pdf)_
-
-### Produces
-
-  - `text/plain` _(.txt)_
+| Accepts | Produces |
+|-----|-----|
+|<ul><li>`application/pdf` _(.pdf)_</li></ul>|<ul><li>`text/plain` _(.txt)_</li></ul>|
 
 ### Usage
 

@@ -1,14 +1,14 @@
 # <small>:nut_and_bolt:</small> Merge
 
 Merges multiple PDF documents into one with a page for each input document.
+   
+### Formats
 
-### Accepts
+This action accepts and produces the following content type formats.
 
-  - `application/pdf` _(.pdf)_
-
-### Produces
-
-  - `application/pdf` _(.pdf)_
+| Accepts | Produces |
+|-----|-----|
+|<ul><li>`application/pdf` _(.pdf)_</li></ul>|<ul><li>`application/pdf` _(.pdf)_</li></ul>|
 
 ### Usage
 

@@ -1,18 +1,14 @@
 # <small>:nut_and_bolt:</small> Scale
 
 Scales (resizes) an image to new dimensions.
+   
+### Formats
 
-### Accepts
+This action accepts and produces the following content type formats.
 
-  - `image/png` _(.png)_
-  - `image/jpeg` _(.jpg)_
-  - `image/webp` _(.webp)_
-  - `image/bmp` _(.bmp)_
-  - `image/heif` _(.heif)_
-
-### Produces
-
-  - `image/png` _(.png)_
+| Accepts | Produces |
+|-----|-----|
+|<ul><li>`image/png` _(.png)_</li><li>`image/jpeg` _(.jpg)_</li><li>`image/webp` _(.webp)_</li><li>`image/bmp` _(.bmp)_</li><li>`image/heif` _(.heif)_</li></ul>|<ul><li>`image/png` _(.png)_</li></ul>|
 
 ### Usage
 

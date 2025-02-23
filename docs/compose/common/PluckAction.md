@@ -1,32 +1,14 @@
 # <small>:nut_and_bolt:</small> Pluck
 
 Selects the specified documents and discards the rest.
+   
+### Formats
 
-### Accepts
+This action accepts and produces the following content type formats.
 
-  - `text/plain` _(.txt)_
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_
-  - `application/pdf` _(.pdf)_
-  - `image/png` _(.png)_
-  - `image/jpeg` _(.jpg)_
-  - `image/webp` _(.webp)_
-  - `image/bmp` _(.bmp)_
-  - `image/heif` _(.heif)_
-  - `application/zip` _(.zip)_
-
-### Produces
-
-  - `text/plain` _(.txt)_
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_
-  - `application/pdf` _(.pdf)_
-  - `image/png` _(.png)_
-  - `image/jpeg` _(.jpg)_
-  - `image/webp` _(.webp)_
-  - `image/bmp` _(.bmp)_
-  - `image/heif` _(.heif)_
-  - `application/zip` _(.zip)_
+| Accepts | Produces |
+|-----|-----|
+|<ul><li>`text/plain` _(.txt)_</li><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_</li><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_</li><li>`application/pdf` _(.pdf)_</li><li>`image/png` _(.png)_</li><li>`image/jpeg` _(.jpg)_</li><li>`image/webp` _(.webp)_</li><li>`image/bmp` _(.bmp)_</li><li>`image/heif` _(.heif)_</li><li>`application/zip` _(.zip)_</li></ul>|<ul><li>`text/plain` _(.txt)_</li><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_</li><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_</li><li>`application/pdf` _(.pdf)_</li><li>`image/png` _(.png)_</li><li>`image/jpeg` _(.jpg)_</li><li>`image/webp` _(.webp)_</li><li>`image/bmp` _(.bmp)_</li><li>`image/heif` _(.heif)_</li><li>`application/zip` _(.zip)_</li></ul>|
 
 ### Usage
 

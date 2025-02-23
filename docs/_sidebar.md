@@ -24,6 +24,7 @@
       - [Get OCR Text](/compose/pdf/GetOcrTextPdfAction.md)
 
     - Word
+      - [Edit](/compose/word/EditWordAction.md)
       - [Find & Replace Text](/compose/word/ReplaceTextWordAction.md)
       - [Mail Merge](/compose/word/MailMergeWordAction.md)
       - [Convert to PDF](/compose/word/ConvertToPdfWordAction.md)

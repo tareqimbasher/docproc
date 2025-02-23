@@ -1,15 +1,14 @@
 # <small>:nut_and_bolt:</small> MailMerge
 
 Executes a Word mail merge.
+   
+### Formats
 
-### Accepts
+This action accepts and produces the following content type formats.
 
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_
-
-### Produces
-
-  - `application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_
+| Accepts | Produces |
+|-----|-----|
+|<ul><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_</li><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_</li></ul>|<ul><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.document` _(.docx)_</li><li>`application/vnd.openxmlformats-officedocument.wordprocessingml.template` _(.dotx)_</li></ul>|
 
 ### Usage
 
@@ -22,7 +21,7 @@ Executes a Word mail merge.
 ```
 #### Properties
 
-**`data`**  `dictionary<string, string>` **Required**
+**`data`**  `idictionary<string, string>` **Required**
 
 A hashmap of merge field data used to populate mail merge fields in a Word document.
 The keys represent the names of the merge fields, and the values contain the text that will replace

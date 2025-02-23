@@ -1,6 +1,6 @@
-# <small>:nut_and_bolt:</small> ReplaceText
+# <small>:nut_and_bolt:</small> Edit
 
-Find and replace text in Word documents.
+Applies a series of edits to Word documents.
    
 ### Formats
 
@@ -14,32 +14,14 @@ This action accepts and produces the following content type formats.
 
 ```js
 {
-  "kind": "WordReplaceText",
-  "findText": null,
-  "replaceText": null,
-  "caseSensitive": true,
-  "wholeWord": false
+  "kind": "WordEdit",
+  "edits": []
 }
 ```
 #### Properties
 
-**`findText`**  `string` **Required**
+**`edits`**  `iwordedit[]` **Required**
 
-The text to replace.
-
-
-**`replaceText`**  `string` **Required**
-
-The text to use as replacement.
-
-
-**`caseSensitive`**  `boolean?`
-
-Perform a case-sensitive search.
-
-
-**`wholeWord`**  `boolean`
-
-Match only whole words.
+The edits to make to the documents.
 
 
