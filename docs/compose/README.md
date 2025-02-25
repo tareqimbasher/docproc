@@ -19,7 +19,7 @@ Be sure to add valid `Content-Disposition` and `Content-Type` headers for each.
 Add one `request` part that contains a JSON string with the [`compose request`](#request).
 
 
-### Example
+#### Example
 
 This request would split a PDF document into multiple documents, one per page. 
 
@@ -45,7 +45,7 @@ Content-Disposition: form-data; name="request"
 ------BOUNDRYNAME--
 ```
 
-### Request
+#### Request
 
 The `request` part should be a JSON serialized string of the following object:
 
@@ -56,7 +56,7 @@ The `request` part should be a JSON serialized string of the following object:
 }
 ```
 
-#### Details
+##### Properties
 
 **`actions`** `Action[]` **Required**
 
@@ -66,7 +66,7 @@ An array of actions to run.
 
 If specified, defines which files that were uploaded should be considered reference documents that are referenceed and used in actions, but not documents that should be operated on themselves.
 
-### Response
+#### Response
 
 The endpoint will respode with `200 OK` and a stream with the output document.
 
@@ -113,7 +113,7 @@ This request contains 3 actions:
 3. Finally, the PDF is compressed to reduce its size. `kind`= [`PdfCompress`](/compose/pdf/CompressPdfAction.md)
 
 
-### Common Properties
+#### Common Properties
 
 These properties are common to all actions.
 
@@ -123,8 +123,6 @@ These properties are common to all actions.
     "continueOnError": false
 }
 ```
-
-#### Details
 
 **`kind`** `ActionKind` **Required**
 
