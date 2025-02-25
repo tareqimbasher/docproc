@@ -25,13 +25,9 @@ This action can accept and produce the following content type formats.
 The edits to apply to the documents.
 
 
-### Types
+## Types
 
-##### `IWordEdit`
-
-Implementations:
-
-**`AddEdit`**
+### AddEdit
 
 ```js
 {
@@ -42,7 +38,25 @@ Implementations:
 }
 ```
 
-**`UpdateEdit`**
+#### Properties
+
+**`path`**  `NodePath` **Required**
+
+The path to the containing node where the new item will be inserted. The path target must be a composite node; a node that can hold child nodes.
+
+
+**`index`**  `int32?`
+
+If specified, the item will be inserted at this index.
+
+
+**`item`**  `ICanBeAdded` **Required**
+
+The new item to add.
+
+
+---
+### UpdateEdit
 
 ```js
 {
@@ -51,7 +65,15 @@ Implementations:
 }
 ```
 
-**`RemoveEdit`**
+#### Properties
+
+**`path`**  `NodePath` **Required**
+
+The path of the node to update.
+
+
+---
+### RemoveEdit
 
 ```js
 {
@@ -60,7 +82,15 @@ Implementations:
 }
 ```
 
-**`CopyEdit`**
+#### Properties
+
+**`path`**  `NodePath` **Required**
+
+The path of the node to remove.
+
+
+---
+### CopyEdit
 
 ```js
 {
@@ -70,3 +100,16 @@ Implementations:
 }
 ```
 
+#### Properties
+
+**`path`**  `NodePath` **Required**
+
+The path of the node to copy.
+
+
+**`destination`**  `NodePath` **Required**
+
+The path of the node to copy to. The target of this path must be a composite node; a node that can hold child nodes.
+
+
+---
