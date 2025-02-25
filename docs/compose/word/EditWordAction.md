@@ -1,6 +1,6 @@
 # <small>:nut_and_bolt:</small> Edit
 
-Applies a series of edits to Word documents.
+Applies a series of edits to Word documents. See [Get Structure](/word/get-structure) for a Word document's structure.
    
 ### Formats
 

@@ -32,3 +32,9 @@
     
   - Zip Actions
     - [Create](/compose/zip/CreateZipAction.md)
+  
+- Word
+
+  - [Get Structure](/word/get-structure.md)
+  - [Get Merge Fields](/word/get-merge-fields.md)
+  - [Get Merge Field Names](/word/get-merge-field-names.md)
