@@ -4,7 +4,7 @@ Applies a series of edits to Word documents.
    
 ### Formats
 
-This action accepts and produces the following content type formats.
+This action can accept and produce the following content type formats.
 
 | Accepts | Produces |
 |-----|-----|
@@ -29,7 +29,7 @@ The edits to apply to the documents.
 
 ##### `IWordEdit`
 
-Types:
+Implementations:
 
 **`AddEdit`**
 
@@ -37,6 +37,7 @@ Types:
 {
   "op": "Add",
   "path": null,
+  "index": null,
   "item": null
 }
 ```

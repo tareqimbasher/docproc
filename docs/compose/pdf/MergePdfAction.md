@@ -4,7 +4,7 @@ Merges multiple PDF documents into one with a page for each input document.
    
 ### Formats
 
-This action accepts and produces the following content type formats.
+This action can accept and produce the following content type formats.
 
 | Accepts | Produces |
 |-----|-----|

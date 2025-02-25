@@ -1,12 +1,27 @@
 # Compose API
 
-One endpoint that accepts one or more documents and a list of [`Actions`](#actions) to apply to those documents. 
+`POST` **/v1/compose**
+
+The endpoint accepts one or more documents, and a collection of [`Actions`](#actions) to run on those documents.
 
 ## Usage
 
-`POST` **/v1/compose**
 
-The endpoint accepts a `multipart/form-data` request body with a `file` part that contains the document(s) to process and an `actions` part that contains a JSON string with the actions to run.
+Use a `multipart/form-data` request body with the following parts:
+
+**`file`** **(required)**
+
+Add one more `file` parts for each document to upload. 
+Be sure to add valid `Content-Disposition` and `Content-Type` headers for each.
+
+**`request`** **(required)**
+
+Add one `request` part that contains a JSON string with the [`compose request`](#request).
+
+
+### Example
+
+This request would split a PDF document into multiple documents, one per page. 
 
 ```js
 POST /v1/compose
@@ -18,59 +33,78 @@ Content-Type: application/pdf
 
 (data)
 ------BOUNDRYNAME
-Content-Disposition: form-data; name="actions"
+Content-Disposition: form-data; name="request"
 
-[
-    {"kind": "PdfSplit"}
-]
+{
+  "actions": [
+    [
+      {"kind": "PdfSplit"}
+    ]
+  ]
+}
 ------BOUNDRYNAME--
 ```
 
-> This request would split a PDF document into multiple documents, one per page. 
+### Request
 
-#### Multipart Form Data
+The `request` part should be a JSON serialized string of the following object:
 
-The request should be multipart form data with 2 parts.
+```js
+{
+  "actions": [...],
+  "refFiles": [...]
+}
+```
 
-**`file`** **(required)**
+#### Details
 
-Add a `file` part **for each** document to include in the request. Be sure to add a valid `Content-Type`.
+**`actions`** `Action[]` **Required**
 
-**`actions`** **(required)**
+An array of actions to run.
 
-Add **only one** `actions` part. Its contents should be an array of actions (`Action[]`) serialized to a JSON string.
+**`refFiles`** `int[]`
 
-#### Response
+If specified, defines which files that were uploaded should be considered reference documents that are referenceed and used in actions, but not documents that should be operated on themselves.
+
+### Response
 
 The endpoint will respode with `200 OK` and a stream with the output document.
 
-The response will also contain a `Content-Type` header with the mimetype of the output document. If the action workflow resulted in multiple documents, the response will be a `.zip` file with the `Content-Type` set to `application/zip`.
+The response will also contain a `Content-Type` header with the mimetype of the output document. If the action workflow resulted in multiple documents, the response will be a `.zip` file containing all output documents with the `Content-Type` set to `application/zip`.
 
 ## Actions
 
-Actions are a way to express a transformation of a document. Each action has a `kind` property that
-identifies its type, and zero or more other property options that are specific to that action. Actions are executed sequentially. When an action runs, it takes the output from the previous step as input. It applies its transformation to the document(s) and its output is then used for the next action.
+An action is a way to express a transformation to the compose pipeline.
 
+- Each action has a `kind` property reflecting its type.
+- An action may have one or more other properties (options) that are specific to that action.
+- Actions are ran sequentially.
+- When an action runs, it takes the output from the previous step as input. It then applies its transformation to the document(s) and the output is then used for the next action.
+- The format (content type) an action accepts as input varies from one action to another. The format an action produces as output also varies just the same.
+
+> Actions are documented in groups under the `Compose` sidebar item.
+
+#### Example
 
 ```js
-[
-  {
-    "kind": "WordMailMerge",
-    "data": {
-      "FirstName": "John",
-      "LastName": "Doe"
+{
+  "actions": [
+    {
+      "kind": "WordMailMerge",
+      "data": {
+        "FirstName": "John",
+        "LastName": "Doe"
+      }
+    },
+    {
+      "kind": "WordConvertToPdf"
+    },
+    {
+      "kind": "PdfCompress"
     }
-  },
-  {
-    "kind": "WordConvertToPdf"
-  },
-  {
-    "kind": "PdfCompress"
-  }
-]
+  ]
+}
 ```
-
-**Breakdown**
 
 This request contains 3 actions:
 
@@ -98,4 +132,4 @@ A discriminator that identifies the type of action.
 
 **`continueOnError`** `boolean`
 
-If true and an error happens in the action, the error is ignored and processing continues with the next action.
+If true and an error occurs while running an action, the error is ignored and processing resumes with the next action.

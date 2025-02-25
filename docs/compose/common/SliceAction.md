@@ -4,7 +4,7 @@ Selects a range of documents and discards the rest.
    
 ### Formats
 
-This action accepts and produces the following content type formats.
+This action can accept and produce the following content type formats.
 
 | Accepts | Produces |
 |-----|-----|

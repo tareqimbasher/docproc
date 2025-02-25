@@ -4,7 +4,7 @@ Scales (resizes) an image to new dimensions.
    
 ### Formats
 
-This action accepts and produces the following content type formats.
+This action can accept and produce the following content type formats.
 
 | Accepts | Produces |
 |-----|-----|
