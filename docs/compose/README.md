@@ -11,7 +11,7 @@ Use a `multipart/form-data` request body with the following parts:
 
 **`file`** **(required)**
 
-Add one more `file` parts for each document to upload. 
+Add one or more `file` parts for each document to upload. 
 Be sure to add valid `Content-Disposition` and `Content-Type` headers for each.
 
 **`request`** **(required)**
