@@ -16,6 +16,7 @@ This action can accept and produce the following content type formats.
 {
   "kind": "WordMailMerge",
   "data": {},
+  "clearEmptyFields": true,
   "unspecifiedFieldValue": null
 }
 ```
@@ -28,8 +29,13 @@ The keys represent the names of the merge fields, and the values contain the tex
 each corresponding field during the merge process.
 
 
+**`clearEmptyFields`**  `boolean`
+
+Whether to remove empty mail merge fields. Default is **true**.
+
+
 **`unspecifiedFieldValue`**  `string`
 
-Gets or sets the text to apply to any merge fields that are not found in the data mapping.If this property is left null or unspecified, those fields will remain unchanged.
+The value to set any merge field that is not specified in the data mapping. If this property is left null or unspecified, those fields will remain unchanged.
 
 

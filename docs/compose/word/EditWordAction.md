@@ -20,14 +20,16 @@ This action can accept and produce the following content type formats.
 ```
 ### Properties
 
-**`edits`**  `IWordEdit[]` **Required**
+**`edits`**  [`IWordEdit[]`](#IWordEdit) **Required**
 
 The edits to apply to the documents.
 
 
-## Types
+### Relevant Types
 
-### AddEdit
+#### AddEdit :id=IWordEdit
+
+Adds a new node to a Word document.
 
 ```js
 {
@@ -38,9 +40,9 @@ The edits to apply to the documents.
 }
 ```
 
-#### Properties
+##### Properties
 
-**`path`**  `NodePath` **Required**
+**`path`**  [`NodePath`](#NodePath) **Required**
 
 The path to the containing node where the new item will be inserted. The path target must be a composite node; a node that can hold child nodes.
 
@@ -50,13 +52,15 @@ The path to the containing node where the new item will be inserted. The path ta
 If specified, the item will be inserted at this index.
 
 
-**`item`**  `ICanBeAdded` **Required**
+**`item`**  [`ICanBeAdded`](#ICanBeAdded) **Required**
 
 The new item to add.
 
 
 ---
-### UpdateEdit
+#### UpdateEdit :id=IWordEdit
+
+Updates an existing Word document node.
 
 ```js
 {
@@ -65,15 +69,17 @@ The new item to add.
 }
 ```
 
-#### Properties
+##### Properties
 
-**`path`**  `NodePath` **Required**
+**`path`**  [`NodePath`](#NodePath) **Required**
 
 The path of the node to update.
 
 
 ---
-### RemoveEdit
+#### RemoveEdit :id=IWordEdit
+
+Removes an existing Word document node.
 
 ```js
 {
@@ -82,15 +88,17 @@ The path of the node to update.
 }
 ```
 
-#### Properties
+##### Properties
 
-**`path`**  `NodePath` **Required**
+**`path`**  [`NodePath`](#NodePath) **Required**
 
 The path of the node to remove.
 
 
 ---
-### CopyEdit
+#### CopyEdit :id=IWordEdit
+
+Copies a Word document node to another location.
 
 ```js
 {
@@ -100,14 +108,14 @@ The path of the node to remove.
 }
 ```
 
-#### Properties
+##### Properties
 
-**`path`**  `NodePath` **Required**
+**`path`**  [`NodePath`](#NodePath) **Required**
 
 The path of the node to copy.
 
 
-**`destination`**  `NodePath` **Required**
+**`destination`**  [`NodePath`](#NodePath) **Required**
 
 The path of the node to copy to. The target of this path must be a composite node; a node that can hold child nodes.
 

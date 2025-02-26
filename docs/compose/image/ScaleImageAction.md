@@ -8,7 +8,7 @@ This action can accept and produce the following content type formats.
 
 | Accepts | Produces |
 |-----|-----|
-|<ul><li>`image/png` _(.png)_</li><li>`image/jpeg` _(.jpg)_</li><li>`image/webp` _(.webp)_</li><li>`image/bmp` _(.bmp)_</li><li>`image/heif` _(.heif)_</li></ul>|<ul><li>`image/png` _(.png)_</li></ul>|
+|<ul><li>`image/png` _(.png)_</li><li>`image/jpeg` _(.jpg)_</li><li>`image/webp` _(.webp)_</li></ul>|<ul><li>`image/png` _(.png)_</li></ul>|
 
 ### Usage
 
@@ -34,6 +34,6 @@ If specified, the image will be scaled to this height. Otherwise the original he
 
 **`quality`**  `int32`
 
-A value between 1 and 100 indicating the quality of the scaled image.
+A value between 1 and 100 indicating the quality of the scaled image. Default is **100**.
 
 

@@ -15,6 +15,7 @@
 
   - Image Actions
     - [Scale](/compose/image/ScaleImageAction.md)
+    - [Convert](/compose/image/ConvertImageAction.md)
 
   - PDF Actions
     - [Merge](/compose/pdf/MergePdfAction.md)
