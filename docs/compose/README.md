@@ -2,37 +2,41 @@
 
 `POST` **/v1/compose**
 
-The endpoint accepts one or more documents, and a collection of [`Actions`](#actions) to run on those documents.
+This endpoint processes one or more documents (files) using a series of [`Actions`](#actions) specified in the request.
 
 ## Usage
 
 
-Use a `multipart/form-data` request body with the following parts:
+Construct  a `multipart/form-data` request body containing the following parts:
 
-**`file`** **(required)**
+**`file`** **(Required)**
 
-Add one or more `file` parts for each document to upload. 
-Be sure to add valid `Content-Disposition` and `Content-Type` headers for each.
+- Include one or more file parts—one for each document to be uploaded.
+- Ensure that each file part includes valid Content-Disposition and Content-Type headers.
 
-**`request`** **(required)**
+**`request`** **(Required)**
 
-Add one `request` part that contains a JSON string with the [`compose request`](#request).
-
+- Include a single `request` part that contains a JSON-serialized [`ComposeRequest`](#ComposeRequest) object. This object defines the actions to be applied to the uploaded documents.
 
 #### Example
 
-This request would split a PDF document into multiple documents, one per page. 
+Below is an example of a multipart/form-data request body:
+
+- **Part 1** (`file`): Contains the document to be uploaded (e.g., `document.pdf`).
+- **Part 2** (`request`): Contains a JSON object (a [`ComposeRequest`](#ComposeRequest)) with an action to split the PDF into multiple documents, one per page.
+
+When the request is processed, the API will apply the specified actions to the uploaded files and return the resulting documents.
 
 ```js
 POST /v1/compose
-Content-Type: multipart/form-data; boundary=----BOUNDRYNAME
+Content-Type: multipart/form-data; boundary=----BOUNDRY7MA4YWxkTrZu0gW
 
-------BOUNDRYNAME
+------BOUNDRY7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="file"; filename="/path/to/document.pdf"
 Content-Type: application/pdf
 
 (data)
-------BOUNDRYNAME
+------BOUNDRY7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="request"
 
 {
@@ -42,10 +46,12 @@ Content-Disposition: form-data; name="request"
     ]
   ]
 }
-------BOUNDRYNAME--
+------BOUNDRY7MA4YWxkTrZu0gW--
 ```
 
-#### Request
+> See the [Examples](/compose/examples.md) page for more.
+
+#### ComposeRequest
 
 The `request` part should be a JSON serialized string of the following object:
 
@@ -64,25 +70,25 @@ An array of actions to run.
 
 **`refFiles`** `int[]`
 
-If specified, defines which files that were uploaded should be considered reference documents that are referenceed and used in actions, but not documents that should be operated on themselves.
+_(Optional)_ An array of indexes identifying which uploaded files should be treated as reference documents. Files listed in this array are not processed by the actions — they serve solely as external references for actions that support including reference documents.
 
 #### Response
 
-The endpoint will respode with `200 OK` and a stream with the output document.
+The endpoint returns a `200 OK` status along with a stream containing the output document. The response's `Content-Type` header will indicate the [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types) of the output document.
 
-The response will also contain a `Content-Type` header with the mimetype of the output document. If the action workflow resulted in multiple documents, the response will be a `.zip` file containing all output documents with the `Content-Type` set to `application/zip`.
+If the applied actions produce multiple documents, the response will be a `.zip` archive containing all output files, and the `Content-Type` will be set to `application/zip`.
 
 ## Actions
 
-An action is a way to express a transformation to the compose pipeline.
+An action represents a transformation step within the compose pipeline.
 
-- Each action has a `kind` property reflecting its type.
-- An action may have one or more other properties (options) that are specific to that action.
-- Actions are ran sequentially.
-- When an action runs, it takes the output from the previous step as input. It then applies its transformation to the document(s) and the output is then used for the next action.
-- The format (content type) an action accepts as input varies from one action to another. The format an action produces as output also varies just the same.
+- Each action includes a `kind` property that identifies its type.
+- Some actions have additional properties (options).
+- Actions are executed sequentially.
+- Each action processes the output from the previous step, applies its transformation, and passes its output to the next action.
+- The input and output formats (content types) of an action may vary depending on its functionality.
 
-> Actions are documented in groups under the `Compose` sidebar item.
+> Detailed documentation for each action is available under the `Compose` sidebar item.
 
 #### Example
 
@@ -96,19 +102,15 @@ An action is a way to express a transformation to the compose pipeline.
         "LastName": "Doe"
       }
     },
-    {
-      "kind": "WordConvertToPdf"
-    },
-    {
-      "kind": "PdfCompress"
-    }
+    { "kind": "WordConvertToPdf" },
+    { "kind": "PdfCompress" }
   ]
 }
 ```
 
 This request contains 3 actions:
 
-1. First the Word document is mail merged using the provided data. `kind` = [`WordMailMerge`](/compose/word/MailMergeWordAction.md)
+1. First the Word document is mail merged using the data mapping. `kind` = [`WordMailMerge`](/compose/word/MailMergeWordAction.md)
 2. The next action converts the Word document to a PDF. `kind` = [`WordConvertToPdf`](/compose/word/ConvertToPdfWordAction.md)
 3. Finally, the PDF is compressed to reduce its size. `kind`= [`PdfCompress`](/compose/pdf/CompressPdfAction.md)
 
